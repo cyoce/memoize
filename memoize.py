@@ -32,7 +32,7 @@ class recurse:
 		self.debug=debug
 
 	def __call__ (self, *args, **kwargs):
-		if sedebug: print (*args, **kwargs)
+		if self.debug: print (*args, **kwargs)
 		return self.func (self, *args, **kwargs)
 
 core = lambda self, n: self (n-1) + self (n-2) if n > 1 else n
